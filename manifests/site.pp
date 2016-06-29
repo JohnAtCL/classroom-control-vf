@@ -53,3 +53,4 @@ file { '/etc/motd':
   content => "Great! I am learning a lot today on Puppet.\n",
 }
 
+notify { "The VM type is ?": }
