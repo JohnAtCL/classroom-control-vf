@@ -1,1 +1,1 @@
-message = 'This message came from johnatcl.puppetlabs.vm'
+message: 'This message came from johnatcl.puppetlabs.vm'
