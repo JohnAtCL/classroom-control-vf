@@ -48,7 +48,11 @@ node default {
   #class { 'skeleton': }
   
   #Excercise 15.1
-  class { 'users': }
+  #class { 'users': }
+  
+  #Excercise 17.1 - Hiera Functions
+  $message = hiera('message')
+  notify{$message:}
 }
 
 #file { '/etc/motd':
