@@ -42,15 +42,17 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  notify { "Hello, my name is ${::hostname}": }
+  #notify { "Hello, my name is ${::hostname}": }
+  
+  class { 'skeleton': }
 }
 
-file { '/etc/motd':
-  ensure  => file,
-  owner   => 'root',
-  group   => 'root',
-  mode    => '0644',
-  content => "Great! I am learning a lot today on Puppet.\n",
-}
+#file { '/etc/motd':
+#  ensure  => file,
+#  owner   => 'root',
+#  group   => 'root',
+#  mode    => '0644',
+#  content => "Great! I am learning a lot today on Puppet.\n",
+#}
 
-notify { "The VM type is ?": }
+#notify { "The VM type is ?": }
