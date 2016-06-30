@@ -44,7 +44,11 @@ node default {
   #   class { 'my_class': }
   #notify { "Hello, my name is ${::hostname}": }
   
-  class { 'skeleton': }
+  # Excercise 9.3
+  #class { 'skeleton': }
+  
+  #Excercise 15.1
+  class { 'users': }
 }
 
 #file { '/etc/motd':
