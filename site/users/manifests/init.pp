@@ -5,5 +5,6 @@ class users {
   #  # groups => ['Users'], # Display in Windows Control Panel
   #}
   
+  # Excercise 15.1: Defined Type
   include users::admins
 }
