@@ -21,8 +21,9 @@ class nginx {
     }
   }
 
-  notify { "osfamily = ${::osfamily}" : }
-
+  #notify { "osfamily = ${::osfamily}" : }
+  notify{'what is osfamily':}
+  
   # user the service will run as. Used in the nginx.conf.erb template
   $user = $::osfamily ? {
   'redhat' => 'nginx',
