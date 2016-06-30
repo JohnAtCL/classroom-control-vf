@@ -16,10 +16,12 @@ class nginx {
       $confdir = 'C:/ProgramData/nginx'
       $logdir = 'C:/ProgramData/nginx/logs'
     }
-    default : {
+    default : 
       fail("Module ${module_name} is not supported on ${::osfamily}")
     }
   }
+
+  notify { "osfamily = ${::osfamily}" : }
 
   # user the service will run as. Used in the nginx.conf.erb template
   $user = $::osfamily ? {
